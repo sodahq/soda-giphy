@@ -5,8 +5,11 @@ class GiphyCollection {
   final GiphyPagination? pagination;
   final GiphyMeta? meta;
 
-  GiphyCollection(
-      {required this.data, required this.pagination, required this.meta});
+  GiphyCollection({
+    required this.data,
+    this.pagination,
+    this.meta,
+  });
 
   factory GiphyCollection.fromJson(Map<String, dynamic> json) {
     return GiphyCollection(

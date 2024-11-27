@@ -372,15 +372,15 @@ class GiphyPreviewImage {
 
 class GiphyDownsizedImage {
   final String url;
-  final String width;
-  final String height;
-  final String size;
+  final String? width;
+  final String? height;
+  final String? size;
 
   GiphyDownsizedImage({
     required this.url,
-    required this.width,
-    required this.height,
-    required this.size,
+    this.width,
+    this.height,
+    this.size,
   });
 
   factory GiphyDownsizedImage.fromJson(Map<String, dynamic> json) {

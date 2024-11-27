@@ -1,9 +1,9 @@
 import 'package:soda_giphy/src/models/index.dart';
 
 class GiphyImages {
-  GiphyStillImage fixedHeightStill;
-  GiphyStillImage originalStill;
-  GiphyFullImage fixedWidth;
+  GiphyStillImage? fixedHeightStill;
+  GiphyStillImage? originalStill;
+  GiphyFullImage? fixedWidth;
   GiphyStillImage? fixedHeightSmallStill;
   GiphyDownsampledImage? fixedHeightDownsampled;
   GiphyPreviewImage? preview;
@@ -27,9 +27,9 @@ class GiphyImages {
   GiphyStillImage? w480Still;
 
   GiphyImages({
-    required this.fixedHeightStill,
-    required this.originalStill,
-    required this.fixedWidth,
+    this.fixedHeightStill,
+    this.originalStill,
+    this.fixedWidth,
     this.fixedHeightSmallStill,
     this.fixedHeightDownsampled,
     this.preview,
@@ -144,9 +144,9 @@ class GiphyImages {
 
   Map<String, dynamic> toJson() {
     return <String, dynamic>{
-      'fixed_height_still': fixedHeightStill.toJson(),
-      'original_still': originalStill.toJson(),
-      'fixed_width': fixedWidth.toJson(),
+      'fixed_height_still': fixedHeightStill?.toJson(),
+      'original_still': originalStill?.toJson(),
+      'fixed_width': fixedWidth?.toJson(),
       'fixed_height_small_still': fixedHeightSmallStill?.toJson(),
       'fixed_height_downsampled': fixedHeightDownsampled?.toJson(),
       'preview': preview?.toJson(),
